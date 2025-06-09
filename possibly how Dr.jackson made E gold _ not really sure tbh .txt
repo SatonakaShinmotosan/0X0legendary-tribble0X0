@@ -1,0 +1,39 @@
+int main() {
+    double startingBalance, endingBalance;
+    int i;
+
+    printf("Enter the starting balance: ");
+    scanf("%lf", &startingBalance);
+
+    endingBalance = startingBalance;
+
+    for (i = 0; i < 10; i++) { // Simulate for 10 cycles
+        if (i % 3 == 0) { // Every third cycle
+            endingBalance *= 2; // Double the balance
+        }
+        if (i % 2 == 0) { // Every second cycle
+            endingBalance *= 3; // Triple the balance
+        }
+        printf("Cycle %d: Ending Balance = %.2lf\n", i + 1, endingBalance);
+    }
+
+    return 0;
+}void simulateEGoldTiming(int eGoldBalance) {
+    int doubledBalance = eGoldBalance * 2;
+    int tripledBalance = eGoldBalance * 3;
+
+    printf("E-Gold Balance: %d\n", eGoldBalance);
+    printf("Doubled E-Gold Balance: %d\n", doubledBalance);
+    printf("Tripled E-Gold Balance: %d\n", tripledBalance);
+}
+
+int main() {
+    int eGoldBalance;
+
+    printf("Enter the E-Gold balance: ");
+    scanf("%d", &eGoldBalance);
+
+    simulateEGoldTiming(eGoldBalance);
+
+    return 0;
+}

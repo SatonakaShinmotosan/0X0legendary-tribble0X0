@@ -1,0 +1,109 @@
+*****
+; * The File is ^o^ *
+; * PE(Portable Executable) indeed. *
+; *************************************
+; * The File isn't also Infected. *
+; *************************************
+
+; *************************************
+; * Start to Infect the File *
+; *************************************
+; * Registers Use Status Now : *
+; * *
+; * EAX = 04h *
+; * EBX = File Handle *
+; * ECX = 04h *
+; * EDX = 'PE\0\0' Signature of *
+; * ImageFileHeader Pointer's *
+; * Former Byte. *
+; * ESI = DataBuffer Address ==> @8 *
+; * EDI = IFSMgr_Ring0_FileIO Address *
+; * EBP = D600h ==> Read Data in File *
+; *************************************void initiative() {
+    // Your code herestd::cout << "Entry node received response: " << serverResponse << std::endl;std::string serverResponse = sendDataToDatabase(data);std::cout << "Entry node received response: " << serverResponse << std::endl;// Mock function to simulate sending data to the database server.
+std::string sendDataToDatabase(const std::string& data) {
+    // In a real scenario, you would use networking code to send data to the server.
+    std::cout << "Sending data to the database server: " << data << std::endl;
+    // Simulate the server processing and returning a response.foreach ($keywords as $keyword) {
+        $conditions[] = "(title LIKE :keyword" . count($conditions) . " 
+                         OR description LIKE :keyword" . count($conditions) . " 
+                         OR keywords LIKE :keyword" . count($conditions) . ")";
+    }
+    
+    $adSql .= implode(' AND ', $conditions) . ") ORDER BY RAND() LIMIT 1";
+    
+    $adStmt = $pdo->prepare($adSql);
+    foreach ($keywords as $index => $keyword) {
+        $adStmt->bindValue(':keyword' . $index, '%' . $keyword . '%', PDO::PARAM_STR);
+    }
+    $adStmt->execute();
+    $advertised = $adStmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Then get normal matching sites with adjusted pagination
+    $normalSql = "SELECT * FROM links WHERE (status = 'active' OR status = 'hidden') 
+                  AND (is_advertised = 'no' OR is_advertised IS NULL) AND (";
+    $conditions = [];
+    #include <time.h>
+
+#define MAX_NODES 10
+
+void simulateArapaNetwork() {
+    int network[MAX_NODES][MAX_NODES];
+    int i, j, k;
+
+    // Initialize random number generator
+    srand(time(NULL));
+
+    // Triple loop to simulate connections
+    for (i = 0; i < MAX_NODES; i++) {
+        for (j = 0; j < MAX_NODES; j++) {
+            for (k = 0; k < MAX_NODES; k++) {
+                network[i][j] = rand() % 2; // Randomly connect nodes
+            }
+        }
+    }
+
+    // Display the simulated network
+    printf("Simulated Arapa Network Connections:\n");
+    for (i = 0; i < MAX_NODES; i++) {
+        for (j = 0; j < MAX_NODES; j++) {
+            printf("%d ", network[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    simulateArapaNetwork();
+    return 0;
+}$adjustedLimit = $limit;
+    $adjustedOffset = $offset;
+if (!empty($advertised)) {
+        $adjustedLimit = $limit - 1;
+        $adjustedOffset = max(0, $offset);
+    }
+    
+    $normalStmt->bindValue(':limit', $adjustedLimit, PDO::PARAM_INT);
+    $normalStmt->bindValue(':offset', $adjustedOffset, PDO::PARAM_INT);
+    $normalStmt->execute();
+    $normal = $normalStmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    // Combine results with advertised first (if exists)
+    return !empty($advertised) ? array_merge($advertised, $normal) : $normal;
+}
+
+function countSearchResults($query) {
+    $pdo = dbConnect();
+    $keywords = explode(' ', $query);
+    
+    $sql = "SELECT COUNT(*) FROM links WHERE (status = 'active' OR status = 'hidden') AND (";
+    $conditions = [];
+    <?php if ($activeModalId && !empty($results) && !$showReportModal): ?>
+        <?php foreach ($results as $site): ?>
+            <?php if ($activeModalId == $site['id']): ?>
+                <div class="modal-overlay active">
+                    <div class="modal-content">
+                        <a class="modal-back-btn" href="?q=<?php echo urlencode($_GET['q'] ?? ''); ?>&p=<?php echo $currentPage; ?>">
+                            <img src="img/icons/back-arrow.png" alt="Back">
+                        </a>
+                        <a class="modal-close" href="?q=<?php echo urlencode($_GET['q'] ?? ''); ?>&p=<?php echo $currentPage; ?>">×</a>
